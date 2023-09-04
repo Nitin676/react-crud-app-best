@@ -1,38 +1,171 @@
-.App {
+/* ResetCSS-START */
+
+/* font-family: 'Montserrat', sans-serif; */
+
+/* html {
+  font-size: 62.5%;
+} */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  color: #333333;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --bd-purple: #4c0bce;
+  --bd-violet: #712cf9;
+  --bd-accent: #ffe484;
+  --bd-yellow: #ffc107;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  --bd-accent-rgb: 255, 228, 132;
+  --bd-pink-rgb: 214, 51, 132;
+  --bd-teal-rgb: 32, 201, 151;
+  --docsearch-primary-color: var(--bd-violet);
+  --docsearch-logo-color: var(--bd-violet);
+  --text-white: #ffffff;
+  --text-black: #333333;
+  --text-yellow: #ffc107;
+}
+
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--bd-black);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0rem;
+}
+
+.sidemenu {
+  width: 100%;
+}
+
+.main {
+  padding: 4rem 2rem;
+}
+
+.main .card {
+  margin-top: 3rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.table {
+  width: 100%;
+}
+
+.table th {
+  color: var(--text-black);
+  background-color: var(--bd-yellow);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0rem;
+  padding: 1.2rem 0.8rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.table td {
+  color: var(--text-black);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0rem;
+  padding: 0.9rem 0.8rem;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-control {
+  color: var(--text-black);
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+label {
+  color: var(--text-black);
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+.form-label {
+  color: var(--bd-black);
+  font-size: 1.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-title {
+  color: var(--bd-black);
+  font-size: 2rem;
+}
+
+.homePage {
+  padding: 1rem;
+}
+
+.compWrapper {
+  padding-top: 2rem;
+}
+
+.sidemenu {
+  width: 100%;
+}
+
+.main .card {
+  margin-top: 3rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: var(--text-white);
+  font-size: 1.3rem;
+  display: inline-block;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover,
+.navbar-expand-lg .navbar-nav .nav-link:active,
+.navbar-expand-lg .navbar-nav .nav-link:focus,
+.navbar-expand-lg .navbar-nav .nav-link.active,
+.navbar-expand-lg .navbar-nav .nav-link.show {
+  color: var(--text-yellow);
+}
+
+.navbar .navbar-brand {
+  color: var(--text-white);
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover {
+  color: var(--text-yellow);
+}
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.bd-navbar {
+  padding: 0.75rem 0;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95));
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 }
