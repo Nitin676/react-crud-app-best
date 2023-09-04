@@ -52,6 +52,12 @@ const Update = () => {
         checkbox,
       })
       .then(() => {
+        // Reset the form fields to their initial state
+        setFirstName("");
+        setLastName("");
+        setCheckbox(false);
+        setError(null); // Clear any previous error
+
         navigate("/read"); // Redirect upon successful update
       })
       .catch((error) => {
