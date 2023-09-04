@@ -7,6 +7,7 @@ const Update = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [checkbox, setCheckbox] = useState(false);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   // ===================================================================================================================
@@ -35,9 +36,14 @@ const Update = () => {
   const updateAPIData = () => {
     // Check if firstName and lastName are not null or empty
     if (!firstName || !lastName) {
-      alert("All Fields are Mandatory!");
+      setError("All Fields are Mandatory!");
       return;
     }
+    
+    // if (!firstName || !lastName) {
+    //   alert("All Fields are Mandatory!");
+    //   return;
+    // }
 
     axios
       .put(`https://64f0dc548a8b66ecf77a2f9d.mockapi.io/fakeData/${id}`, {
@@ -49,6 +55,7 @@ const Update = () => {
         navigate("/read"); // Redirect upon successful update
       })
       .catch((error) => {
+        setError("An error occurred while updating data.");
         console.error(error); // Handle the error
       });
   };
@@ -60,7 +67,7 @@ const Update = () => {
       <h2 className="main-header text-center">
         <span className="badge text-dark fs-1">React Crud Operations</span>
       </h2>
-      {/* {error && <div className="alert alert-danger">{error}</div>} */}
+      {error && <div className="alert alert-danger text-center">{error}</div>}
       <div className="card">
         <div className="card-body">
           <div className="createTitle d-flex flex-wrap align-items-center justify-content-center">
